@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-<link href="Koen_Roosa.css" rel="stylesheet" type="text/css" />
+<link href="stylesheet.css" rel="stylesheet" type="text/css" />
 <title>Home Page</title>
     
     </head>
@@ -14,30 +14,70 @@
 	
           
                 <div class="topnav" id="myTopnav">
-       <a href="index.html"><img src="afbeeldingen/logo.png" id="logo"></a>
           <a id="knop1" class="knoppen" href="index.html"> Home</a>
-          <a class="knoppen" href="Koen_Roosa_overmij.html"> Over mij</a>
-          <a class="knoppen"  href="Koen_Roosa_motivatie.html">  Motivatie </a>
-          <a class="knoppen" href="Koen_Roosa_cv.html"> CV </a>
-          <a  class="knoppen" href="Koen_Roosa_portfolio.html"> Portfolio </a>
+          <a class="knoppen" href="klanten.html"> Klanten Pagina</a>
+          <a class="knoppen"  href="algemeen.html">  Algemene Informatie </a>
+          <a class="knoppen" href="hosting.html"> Hosting </a>
+          <a  class="knoppen" href="cloud.html"> Cloud </a>
+          <a  class="knoppen" href="social.html"> Social Media </a>
+          <a  class="knoppen" href="cloud.html"> Contact </a>
+                          
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
                 </div>
      
+     	 <div class="linkwrapper">
+        <center><h2 id="social">Social Media</h2></center>
+        <center><p><a class="knoppen1" href="http://www.facebook.com" target="_blank">facebook</a></p></center>
+        <center><p><a class="knoppen1" href="http://www.instagram.com" target="_blank">instagram</a></p></center>
+        <center><p><a class="knoppen1" href="http://twitter.com" target="_blank" >twitter</a></p></center>
+    </div>
+    
 
+
+     
+        <h2>Foto's</h2>
+
+<div class="content section" >
+
+  <img class="mySlides slides" id="foto" src="afbeeldingen/afbeelding%203.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/background.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/background1.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/i%20do%20ever.jpg" >
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000);    
+}
+</script>
+        
     
 
  
   <footer>
     <nav>
       <ul id="sitemap">
-        <li><a id="sitemap1" href="index.html">Home</a></li>
-        <li><a href="Koen_Roosa_overmij.html">Over Mij</a></li>
-        <li><a href="Koen_Roosa_motivatie.html">Motivatie</a></li>
-        <li><a href="Koen_Roosa_cv.html">CV</a></li>
-        <li ><a href="Koen_Roosa_portfolio.html">Portfolio</a></li>
-          <li ><a href="https://www.facebook.com/koen.roosa" target="_blank">Facebook</a></li>
-          <li ><a href="https://www.instagram.com/koenroosa/" target="_blank">Instagram</a></li>
-          <li ><a  href="https://twitter.com/koenroosa" target="_blank" >Twitter</a></li>
+        <li><a id="" href="index.html"> Home</a></li>
+        <li><a  href="klanten.html"> Klanten Pagina</a></li>
+        <li><a href="algemeen.html">  Algemene Informatie </a></li>
+        <li><a href="hosting.html"> Hosting </a></li>
+        <li ><a href="cloud.html"> Cloud </a></li>
+           <li ><a  href="social.html"> Social Media </a></li>
+           <li ><a href="cloud.html"> Contact </a></li>
+          <li ><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+          <li ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+          <li ><a  href="https://twitter.com/" target="_blank" >Twitter</a></li>
       </ul>
     </nav>
  
