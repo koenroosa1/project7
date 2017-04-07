@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/png" href="afbeeldingen/logo.png"/>
+<title>Home Page</title>
+    
+    </head>
+
+ <body>  
+     
+      
+	
+          
+                <div class="topnav" id="myTopnav">
+          <a id="knop1" class="knoppen" href="index.html"> Home</a>
+          <a class="knoppen" href="klanten.html"> Klanten Pagina</a>
+          <a class="knoppen"  href="algemeen.html">  Algemene Informatie </a>
+          <a class="knoppen" href="hosting.html"> Hosting </a>
+          <a  class="knoppen" href="cloud.html"> Cloud </a>
+          <a  class="knoppen" href="social.html"> Social Media </a>
+          <a  class="knoppen" href="cloud.html"> Contact </a>
+                          
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                </div>
+     
+     	 <div class="linkwrapper">
+        <center><h2 id="social">Social Media</h2></center>
+        <center><p><a class="knoppen1" href="http://www.facebook.com" target="_blank">facebook</a></p></center>
+        <center><p><a class="knoppen1" href="http://www.instagram.com" target="_blank">instagram</a></p></center>
+        <center><p><a class="knoppen1" href="http://twitter.com" target="_blank" >twitter</a></p></center>
+    </div>
+    
+
+
+     
+        <h2>Foto's</h2>
+
+<div class="content section" >
+
+  <img class="mySlides slides" id="foto" src="afbeeldingen/adres.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/http.png" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/linux.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/serevr.png" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/server.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/webhosting.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/webhosting2.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/webhosting1.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/www.jpg" >
+    
+</div>
+
+
+        
+    
+
+ 
+  <footer>
+    <nav>
+      <ul id="sitemap">
+        <li><a id="" href="index.html"> Home</a></li>
+        <li><a  href="klanten.html"> Klanten Pagina</a></li>
+        <li><a href="algemeen.html">  Algemene Informatie </a></li>
+        <li><a href="hosting.html"> Hosting </a></li>
+        <li ><a href="cloud.html"> Cloud </a></li>
+           <li ><a  href="social.html"> Social Media </a></li>
+           <li ><a href="cloud.html"> Contact </a></li>
+          <li ><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+          <li ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+          <li ><a  href="https://twitter.com/" target="_blank" >Twitter</a></li>
+      </ul>
+    </nav>
+ 
+    <div class="container"></div>
+  </footer>
+     
+       
+       <div id="footer">
+         <center><p><strong>©Koen Roosa PICT4V1a</strong></p></center>
+    </div>
+     
+     
+     <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+         
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000);    
+}
+        
+</script>
+</body>
+</html>
