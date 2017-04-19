@@ -1,5 +1,5 @@
 body{
-    background: url(background/achtergrond.jpg);
+    background: url(background/achtergrond2.jpg);
     width:100%;
     margin:auto;
     background-color: blue
@@ -242,7 +242,7 @@ color: white;
 
 #foto{
     width: 80%;
-    height: 300px;
+    height: 400px;
 }
 
 

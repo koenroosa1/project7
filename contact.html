@@ -4,7 +4,9 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type" />
 <link href="contact.css" rel="stylesheet" type="text/css" />
-<title>Home Page</title>
+<script type="text/javascript" src="messages.js"></script>
+    <link rel="shortcut icon" type="image/png" href="afbeeldingen/logo.png"/>
+<title>Contact</title>
     
     </head>
 
@@ -20,7 +22,7 @@
           <a class="knoppen" href="hosting.html"> Hosting </a>
           <a  class="knoppen" href="cloud.html"> Cloud </a>
           <a  class="knoppen" href="social.html"> Social Media </a>
-          <a  class="knoppen" href="cloud.html"> Contact </a>
+          <a  class="knoppen" href="contact.html"> Contact </a>
                           
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
                 </div>
@@ -33,38 +35,36 @@
     </div>
     
 
-
+<div class="tekstwrapper" >
      
-        <h2>Foto's</h2>
+<p>Contactgegevens:</p>
+     <p>Colicss</p>
+     <p>Herenstraat 24</p>
+     <p>7776 AG, Slagharen</p>
+     <p>06-12412498</p>
+    <p>KVK: 05076893</p>
 
-<div class="content section" >
-
-  <img class="mySlides slides" id="foto" src="afbeeldingen/afbeelding%203.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/background.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/background1.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/i%20do%20ever.jpg" >
+     </div>
+    
+<div id="wrapper">
+  <form name="form" id="form" class="form" action="success.html" onsubmit="return validate(this)" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" name="name" id="name" />
+    <label for="email">Email Address:</label>
+    <input type="text" name="email" id="email" />
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender">
+      <option value ="">Please Select</option>
+      <option value ="male">Male</option>
+      <option value ="female">Female</option>
+    </select>
+    <label for="message">Message:</label>
+    <input type="text" name="message" id="message" />
+    <input type="submit" value="Submit" class="submit" />
+  </form>
 </div>
 
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000);    
-}
-</script>
-        
-    
-
- 
+     
   <footer>
     <nav>
       <ul id="sitemap">
@@ -72,9 +72,9 @@ function carousel() {
         <li><a  href="klanten.html"> Klanten Pagina</a></li>
         <li><a href="algemeen.html">  Algemene Informatie </a></li>
         <li><a href="hosting.html"> Hosting </a></li>
-        <li ><a href="cloud.html"> Cloud </a></li>
+        <li ><a href="contact.html"> Cloud </a></li>
            <li ><a  href="social.html"> Social Media </a></li>
-           <li ><a href="cloud.html"> Contact </a></li>
+           <li ><a href="contact.html"> Contact </a></li>
           <li ><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
           <li ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
           <li ><a  href="https://twitter.com/" target="_blank" >Twitter</a></li>
@@ -90,16 +90,6 @@ function carousel() {
     </div>
      
      
-     <script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-        
-</script>
+
 </body>
 </html>

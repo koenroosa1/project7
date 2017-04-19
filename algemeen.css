@@ -1,5 +1,5 @@
 body{
-    background: url(background/achtergrond.jpg);
+    background: url(background/achtergrond2.jpg);
     width:100%;
     margin:auto;
     background-color: blue
@@ -282,3 +282,9 @@ p{
     margin-left: 30%;
 }
 
+.text{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 10%;
+}

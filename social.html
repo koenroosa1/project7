@@ -4,7 +4,8 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type" />
 <link href="social.css" rel="stylesheet" type="text/css" />
-<title>Home Page</title>
+    <link rel="shortcut icon" type="image/png" href="afbeeldingen/logo.png"/>
+<title>Social</title>
     
     </head>
 
@@ -20,7 +21,7 @@
           <a class="knoppen" href="hosting.html"> Hosting </a>
           <a  class="knoppen" href="cloud.html"> Cloud </a>
           <a  class="knoppen" href="social.html"> Social Media </a>
-          <a  class="knoppen" href="cloud.html"> Contact </a>
+          <a  class="knoppen" href="contact.html"> Contact </a>
                           
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
                 </div>
@@ -35,32 +36,17 @@
 
 
      
-        <h2>Foto's</h2>
+  <h2 id="facebook">Facebook</h2>     
+<a href="https://www.facebook.com/" target="_blank"><img src="afbeeldingen/facebook.png" id="logo1" class="logo"></a>
+<h2 id="instagram">Instagram</h2>
+<a href="https://www.instagram.com/" target="_blank"><img src="afbeeldingen/instagram.png" id="logo2" class="logo"></a>
+<h2 id="twitter">Twitter</h2>
+<a href="https://twitter.com/?lang=nl" target="_blank"><img src="afbeeldingen/twitter.png" class="logo" id="logo3"></a>
+     
+<iframe border=0 frameborder=0 height=250 width=550 
+ src="http://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2Fjack%2Fstatus%2F20"></iframe>
+     
 
-<div class="content section" >
-
-  <img class="mySlides slides" id="foto" src="afbeeldingen/afbeelding%203.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/background.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/background1.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/i%20do%20ever.jpg" >
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000);    
-}
-</script>
         
     
 
@@ -74,7 +60,7 @@ function carousel() {
         <li><a href="hosting.html"> Hosting </a></li>
         <li ><a href="cloud.html"> Cloud </a></li>
            <li ><a  href="social.html"> Social Media </a></li>
-           <li ><a href="cloud.html"> Contact </a></li>
+           <li ><a href="contact.html"> Contact </a></li>
           <li ><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
           <li ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
           <li ><a  href="https://twitter.com/" target="_blank" >Twitter</a></li>
@@ -99,7 +85,24 @@ function myFunction() {
         x.className = "topnav";
     }
 }
-        
+
+$(document).ready(function() {
+    /* find all iframes with ids starting with "tweet_" */
+    $("iframe[id^='tweet_']").load(function() {
+        this.contentWindow.postMessage({ element: this.id, query: "height" },
+            "http://twitframe.com");
+    });
+});
+
+/* listen for the return message once the tweet has been loaded */
+$(window).bind("message", function(e) {
+    var oe = e.originalEvent;
+    if (oe.origin != "http://twitframe.com" && oe.origin != "https://twitframe.com")
+        return;
+	
+    if (oe.data.height && oe.data.element.match(/^tweet_/))
+        $("#" + oe.data.element).css("height", parseInt(oe.data.height) + "px");
+});
 </script>
 </body>
 </html>

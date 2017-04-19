@@ -4,6 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type" />
 <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/png" href="afbeeldingen/logo.png"/>
 <title>Home Page</title>
     
     </head>
@@ -20,7 +21,7 @@
           <a class="knoppen" href="hosting.html"> Hosting </a>
           <a  class="knoppen" href="cloud.html"> Cloud </a>
           <a  class="knoppen" href="social.html"> Social Media </a>
-          <a  class="knoppen" href="cloud.html"> Contact </a>
+          <a  class="knoppen" href="contact.html"> Contact </a>
                           
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
                 </div>
@@ -39,28 +40,19 @@
 
 <div class="content section" >
 
-  <img class="mySlides slides" id="foto" src="afbeeldingen/afbeelding%203.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/background.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/background1.jpg" >
-  <img class="mySlides slides" id="foto" src="afbeeldingen/i%20do%20ever.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/adres.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/http.png" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/linux.jpg" >
+  <img class="mySlides slides" id="foto" src="afbeeldingen/serevr.png" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/server.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/webhosting.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/webhosting2.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/webhosting1.jpg" >
+    <img class="mySlides slides" id="foto" src="afbeeldingen/www.jpg" >
+    
 </div>
 
-<script>
-var myIndex = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000);    
-}
-</script>
         
     
 
@@ -74,7 +66,7 @@ function carousel() {
         <li><a href="hosting.html"> Hosting </a></li>
         <li ><a href="cloud.html"> Cloud </a></li>
            <li ><a  href="social.html"> Social Media </a></li>
-           <li ><a href="cloud.html"> Contact </a></li>
+           <li ><a href="contact.html"> Contact </a></li>
           <li ><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
           <li ><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
           <li ><a  href="https://twitter.com/" target="_blank" >Twitter</a></li>
@@ -98,6 +90,21 @@ function myFunction() {
     } else {
         x.className = "topnav";
     }
+}
+         
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000);    
 }
         
 </script>

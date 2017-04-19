@@ -1,8 +1,10 @@
 body{
-    background: url(background/achtergrond.jpg);
+    background: url(background/achtergrond2.jpg);
     width:100%;
     margin:auto;
-    background-color: blue
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -245,6 +247,13 @@ color: white;
     height: 300px;
 }
 
+.tekstwrapper{
+    width: 15%;
+    margin-left: 85%;
+    text-align: center;
+    font-size: 18px;
+    font-family: cursive;
+}
 
 .knoppen:hover{
     color: white;
@@ -280,5 +289,76 @@ p{
     font-size: 120%;
     width: 40%;
     margin-left: 30%;
+}
+
+.formwrapper{
+   margin-left: 35% ;
+    text-align: center;
+    width: 30%;
+    margin-top: -17%;
+    padding-bottom: 30px;
+}
+form{
+    color: black;
+}
+
+
+
+body {
+  font: 12px Verdana, Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+#wrapper {
+  width: 300px;
+  margin-bottom: 300px;
+margin-left: 650px;
+}
+
+.form {
+  float: left;
+  padding: 0 10px 10px 10px;
+  background: #f3f3f3;
+  border: 2px solid #cfcfcf;
+}
+
+.form label {
+  float: left;
+  width: 100px;
+  padding: 10px 10px 0 0;
+  font-weight: bold;
+}
+
+.form select {
+  float: left;
+  width: 146px;
+  margin-top: 10px;
+}
+
+.form input {
+  float: left;
+  margin-top: 10px;
+}
+
+.form .submit {
+  clear: both;
+}
+
+#msg {
+  display: none;
+  position: absolute;
+  z-index: 200;
+  background: url(msg_arrow.gif) left center no-repeat;
+  padding-left: 7px;
+}
+
+#msgcontent {
+  display: block;
+  background: #f3e6e6;
+  border: 2px solid #924949;
+  border-left: none;
+  padding: 5px;
+  min-width: 150px;
+  max-width: 250px;
 }
 

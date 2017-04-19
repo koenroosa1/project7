@@ -1,5 +1,5 @@
 body{
-    background: url(background/achtergrond.jpg);
+    background: url(background/achtergrond2.jpg);
     width:100%;
     margin:auto;
     background-color: blue
@@ -135,7 +135,7 @@ height: 30px;
     color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -143,7 +143,7 @@ height: 30px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -169,7 +169,7 @@ height: 30px;
 
 
 h2{
-color: white;
+color: #f2f2f2;
     text-align: center;
 }
 
@@ -282,3 +282,15 @@ p{
     margin-left: 30%;
 }
 
+.tekstwrapper{
+    width: 30%;
+    margin-left: 35%;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.cloud{
+    color: #f2f2f2;
+    text-decoration-style: solid;
+}
